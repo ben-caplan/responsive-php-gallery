@@ -63,9 +63,9 @@
 				$percentWidth = (($imgDetails[0] / $imgDetails[1]) / $ratioTotal)*(100-((($numImages-1)*$gutterRatio)*100));
 				$imgGutter = $percentWidth * $gutterRatio;
 				
-				if($itemCount===1) $margin = 'margin: 0 '.$imgGutter.'% '.($gutterRatio*100).'% 0;';
-				elseif($itemCount%$numImages === 0) $margin = 'margin: 0 0 '.($gutterRatio*100).'% '.$imgGutter.'%;';
-				else $margin = 'margin: 0 '.$imgGutter.'% '.($gutterRatio*100).'%';
+				if($itemCount===1) $margin = 'margin: 0 '.($gutterRatio/2*100).'% '.($gutterRatio*100).'% 0;';
+				elseif($itemCount%$numImages === 0) $margin = 'margin: 0 0 '.($gutterRatio*100).'% '.($gutterRatio/2*100).'%;';
+				else $margin = 'margin: 0 '.($gutterRatio/2*100).'% '.($gutterRatio*100).'%';
 				?>
 					<figure class="galleryItem" style="width:<?php echo $percentWidth; ?>%; <?php echo $margin; ?>">
 						<img src="<?php echo $img['url']; ?>" alt="<?php echo !empty($img['description']) ? $img['description'] : 'Image of '.$title; ?>" />
@@ -81,4 +81,5 @@
 			echo '</div><!-- .galleryRow -->';
 		endforeach;//end foreach $gallery as $galleryRow
 		echo '</div><!-- #gallery -->';
+	endif;
 ?>
