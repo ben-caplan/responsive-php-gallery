@@ -17,7 +17,7 @@
 				'url' => 'http://mysite.com/images/adorable-puppy-small.jpg',
 				'description' => 'Fluffy puppy'
 			),
-			'low_res_image' => array(
+			'high_res_image' => array(
 				'url' => 'http://mysite.com/images/adorable-puppy-big.jpg',
 				'description' => 'Fluffy puppy'
 			),
